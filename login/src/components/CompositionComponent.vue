@@ -7,14 +7,41 @@
       </li>
     </ul>
     <p>Count: {{ todoCount }} / {{ meta.totalCount }}</p>
-    <p>Active: {{ active ? 'yes' : 'no' }}</p>
+    <p>Active: {{ active ? "yes" : "no" }}</p>
     <p>Clicks on todos: {{ clickCount }}</p>
+    <q-btn
+      @click="$q.notify('Mensaje de notificación')"
+      color="primary"
+      label="Mostra mensaje"
+    />
+    <q-icon name="alarm" />
+    <q-btn
+      @click="mostrarNotificacion"
+      color="primary"
+      label="Mostrar otra notificación"
+    />
+    <q-btn color="white" text-color="black" label="Esto es un botón" />
+    <q-btn :color="miVariableColor" label="asd" />
+
+    <div v-ripple>Click Me</div>
+    <div v-touch-pan="handler">...</div>
+    <div v-touch-swipe="handler">...</div>
+    <div v-ripple>Click me. I got ripples.</div>
+
+    <q-page class="flex flex-center">
+      <q-input @input="hacerAlgo" label="Escribe algo" />
+    </q-page>
   </div>
 </template>
 
 <script lang="ts">
 import {
-  defineComponent, PropType, computed, ref, toRef, Ref
+  defineComponent,
+  PropType,
+  computed,
+  ref,
+  toRef,
+  Ref
 } from '@vue/composition-api'
 import { Todo, Meta } from './models'
 
@@ -35,6 +62,21 @@ function useDisplayTodo (todos: Ref<Todo[]>) {
 
 export default defineComponent({
   name: 'CompositionComponent',
+  data () {
+    return {
+      miVariableColor: 'red'
+    }
+  },
+
+  methods: {
+    mostrarNotificacion () {
+      this.$q.notify('Otra notificacion')
+    },
+    hacerAlgo () {
+      console.log('haciendo algo')
+    }
+  },
+
   props: {
     title: {
       type: String,
