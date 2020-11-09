@@ -20,6 +20,11 @@ const routes: RouteConfig[] = [
         path: '/acerca/',
         name: 'acerca',
         component: () => import('pages/Acerca.vue')
+      },
+      {
+        path: '/login/',
+        name: 'login',
+        component: () => import('pages/Login.vue')
       }
     ]
   },

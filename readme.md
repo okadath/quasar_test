@@ -396,6 +396,12 @@ definir imagenes guardadas en assets:
 
 ### build cn el ide
 
+creo que hay que agregar esto para convertir un web en app
+
+```sh
+yarn quasar mode add capacitor
+```
+
 ```sh
 yarn  quasar build -m capacitor -T android --ide
 ```
@@ -404,4 +410,18 @@ fixear errores cn lint:
 
 ```sh
 yarn run lint --fix
+```
+
+para desactivar eslint mientras trabajas buscar en el `quasar.conf.js` las siguientes lineas y comentarlas:
+
+```js
+ extendWebpack (cfg) {
+        // lo de abajo esta comentado para desactivar eslint
+        // cfg.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /node_modules/
+        // })
+      }
 ```

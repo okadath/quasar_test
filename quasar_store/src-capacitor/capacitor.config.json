@@ -1,0 +1,7 @@
+{
+  "appId": "asd.test_login.asd",
+  "appName": "Quasar App",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}
