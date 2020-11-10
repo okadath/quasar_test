@@ -41,6 +41,12 @@
             Acerca de
           </q-item-section>
         </q-item>
+
+        <q-item :to="{ name: 'card' }" clickable v-ripple>
+          <q-item-section>
+            test_card
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 

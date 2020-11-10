@@ -425,3 +425,6 @@ para desactivar eslint mientras trabajas buscar en el `quasar.conf.js` las sigui
         // })
       }
 ```
+
+uuid in all systems?????
+https://www.stevenmoseley.com/blog/tech/uuid-primary-keys-django-rest-framework-2-steps

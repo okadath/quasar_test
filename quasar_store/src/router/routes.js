@@ -90,6 +90,8 @@ import Resource from '../components/resources/Resources.vue'
 
 // import { RouteConfig } from 'vue-router'
 // import { Store } from '../store/index.js'
+import Card from '../components/card.vue'
+
 const routes = [
   {
     path: '/',
@@ -113,6 +115,11 @@ const routes = [
         meta: {
           requiresAuth: true
         }
+      },
+      {
+        path: '/card',
+        name: 'card',
+        component: Card, 
       }
       // {
       //   path: '/usuarios/',
