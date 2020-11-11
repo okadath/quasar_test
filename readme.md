@@ -499,6 +499,108 @@ Vue.use(Buefy, {
 })
 ```
 
+### personalizar color buefy
+
+https://buefy.org/documentation/customization/
+creamos un archivo .scss en el que se almacenaran las variables a personalizar
+
+```scss
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #000dbf;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+$twitter: #40ffb6;
+$twitter-invert: findColorInvert($twitter);
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+    (
+        "white": (
+            $white,
+            $black,
+        ),
+        "black": (
+            $black,
+            $white,
+        ),
+        "light": (
+            $light,
+            $light-invert,
+        ),
+        "dark": (
+            $dark,
+            $dark-invert,
+        ),
+        "primary": (
+            $primary,
+            $primary-invert,
+            $primary-light,
+            $primary-dark,
+        ),
+        "link": (
+            $link,
+            $link-invert,
+            $link-light,
+            $link-dark,
+        ),
+        "info": (
+            $info,
+            $info-invert,
+            $info-light,
+            $info-dark,
+        ),
+        "success": (
+            $success,
+            $success-invert,
+            $success-light,
+            $success-dark,
+        ),
+        "warning": (
+            $warning,
+            $warning-invert,
+            $warning-light,
+            $warning-dark,
+        ),
+        "danger": (
+            $danger,
+            $danger-invert,
+            $danger-light,
+            $danger-dark,
+        ),
+    ),
+    $custom-colors
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+```
+y lo exportamos en el boot/buefy,js:
+
+```js
+import Vue from 'vue'
+import Buefy from 'buefy'
+// ya no necesitamos el default de buefy, no hay que importarlo
+// import 'buefy/dist/buefy.css'
+// importamos nuestras variables en el archivo .scss
+import "src/boot/asd.scss"
+import '@mdi/font/css/materialdesignicons.css'
+Vue.use(Buefy, {
+})
+```
+
 TODO:
-cambiar el color por default del form de bulma
 cambiar el hint y el cursor de android del form (o eliminarlo)

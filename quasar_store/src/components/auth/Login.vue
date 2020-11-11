@@ -3,7 +3,7 @@
     <form class="login" @submit.prevent="login">
       <h1>Log in</h1>
       <section>
-        <b-field label="Email" type="is-success">
+        <b-field label="Email" >
             <b-input required v-model="email" color="red" type="email" placeholder="Email"  ></b-input>
         </b-field>
            <b-field label="Password">
