@@ -31,6 +31,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+const BaseUrl = 'https://www.glsteamedition.com'
 
 Vue.use(Vuex)
 export default new Vuex.Store({
@@ -68,7 +69,7 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         commit('auth_request')
         axios({
-          url: 'https://www.glsteamedition.com/create_token_with_mail/',
+          url: BaseUrl + '/create_token_with_mail/',
           data: user,
           method: 'POST'
         })

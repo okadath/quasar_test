@@ -1,12 +1,17 @@
 <template>
 <div>
     <form class="login" @submit.prevent="login">
-    <h1>Sign in</h1>
-    <label>Email</label>
-    <input required v-model="email" type="email" placeholder="Name"/>
-    <label>Password</label>
-    <input required v-model="password" type="password" placeholder="Password"/>
+      <h1>Log in</h1>
+      <section>
+        <b-field label="Email" type="is-success">
+            <b-input required v-model="email" color="red" type="email" placeholder="Email"  ></b-input>
+        </b-field>
+           <b-field label="Password">
+            <b-input type="password" v-model="password" placeholder="Password" required  password-reveal>
+            </b-input>
+        </b-field>
     <hr/>
+      </section>
     <button type="submit">Login</button>
     </form>
 </div>

@@ -428,3 +428,77 @@ para desactivar eslint mientras trabajas buscar en el `quasar.conf.js` las sigui
 
 uuid in all systems?????
 https://www.stevenmoseley.com/blog/tech/uuid-primary-keys-django-rest-framework-2-steps
+
+flexbox
+https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/
+https://quasar.dev/layout/grid/flex-playground
+
+quasar ya trae iconos ṕero al agregar buefy no los reconoce, hay que instalarlos
+
+## Buefy
+
+lo instalamos con
+
+```sh
+yarn add buefy
+yarn quasar new boot buefy
+```
+
+y agregamos las siguientes lineas al archivo de boot/buefy.js para que se cargue al arrancar(con cualquier paquete):
+
+```js
+import Vue from 'vue'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+Vue.use(Buefy)
+```
+
+y tambien lo agregamos al quasar.conf.js:
+
+```js
+   boot: [
+
+      'i18n',
+      'axios',
+      'buefy'
+    ],
+
+```
+
+Buefy no trae iconos por default, no se como pasarle los de Quasar(si es que los tiene)
+
+para FontAwesome:
+
+```sh
+yarn add @fortawesome/fontawesome-free
+```
+
+```js
+import Vue from 'vue'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css' 
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
+Vue.use(Buefy, {
+  defaultIconPack: 'fas',
+})
+```
+
+para MaterialDesign:
+
+```sh
+yarn add @mdi/font
+```
+
+```js
+import Vue from 'vue'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+import '@mdi/font/css/materialdesignicons.css' 
+Vue.use(Buefy, {  
+})
+```
+
+TODO:
+cambiar el color por default del form de bulma
+cambiar el hint y el cursor de android del form (o eliminarlo)
