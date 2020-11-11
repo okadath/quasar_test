@@ -104,6 +104,11 @@ const routes = [
         component: () => import('pages/Index.vue')
       },
       {
+        path: '/login/',
+        name: 'login',
+        component: () => import('components/auth/Login.vue')
+      },
+      {
         path: '/home/',
         name: 'home',
         component: Home
@@ -119,8 +124,14 @@ const routes = [
       {
         path: '/card',
         name: 'card',
-        component: Card, 
+        component: Card
+      },
+      {
+        path: '/about/',
+        name: 'about',
+        component: () => import('components/views/About.vue')
       }
+
       // {
       //   path: '/usuarios/',
       //   name: 'usuarios',

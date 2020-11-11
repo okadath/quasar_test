@@ -36,12 +36,35 @@
           </q-item-section>
         </q-item>
 
+     <span v-if="isLoggedIn">
         <q-item :to="{ name: 'resources' }" clickable v-ripple>
           <q-item-section>
-            Acerca de
+            resources
           </q-item-section>
         </q-item>
+      </span>
 
+      <span v-if="isLoggedIn">
+          <q-item :to="{ name: 'login' }" clickable v-ripple>
+            <q-item-section @click="logout">
+               Logout
+            </q-item-section>
+          </q-item>
+      </span>
+
+      <span v-else>
+        <q-item :to="{ name: 'login' }" clickable v-ripple>
+          <q-item-section>
+            login
+          </q-item-section>
+        </q-item>
+        </span>
+
+        <q-item :to="{ name: 'about' }" clickable v-ripple>
+          <q-item-section>
+            about
+          </q-item-section>
+        </q-item>
         <q-item :to="{ name: 'card' }" clickable v-ripple>
           <q-item-section>
             test_card
@@ -75,6 +98,20 @@ export default {
       left: false,
       right: false
     }
+  },
+  computed: {
+    isLoggedIn: function () {
+      return this.$store.getters.isLoggedIn
+    }
+  },
+  methods: {
+    logout: function () {
+      this.$store.dispatch('logout').then(() => {
+        this.$router.push('/login')
+      })
+    }
   }
+
 }
+
 </script>
