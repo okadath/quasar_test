@@ -24,12 +24,15 @@
     <q-btn :color="miVariableColor" label="asd" />
 
     <div v-ripple>Click Me</div>
-    <div v-touch-pan="handler">...</div>
-    <div v-touch-swipe="handler">...</div>
+<!-- estos eran lo que me mandaba error -->
+    <!-- <div v-touch-pan="handler">...</div>
+    <div v-touch-swipe="handler">...</div> -->
     <div v-ripple>Click me. I got ripples.</div>
 
     <q-page class="flex flex-center">
-      <q-input @input="hacerAlgo" label="Escribe algo" />
+      <q-input @input="hacerAlgo" v-model="mess" label="Escribe algo" />
+       <!-- <q-input v-on:change="hacerAlgo" label="Escribe algo" /> -->
+
     </q-page>
   </div>
 </template>
@@ -43,6 +46,7 @@ import {
   toRef,
   Ref
 } from '@vue/composition-api'
+// import { log } from 'util'
 import { Todo, Meta } from './models'
 
 function useClickCount () {
@@ -64,16 +68,24 @@ export default defineComponent({
   name: 'CompositionComponent',
   data () {
     return {
-      miVariableColor: 'red'
+      miVariableColor: 'red',
+      mess: ''
+
     }
   },
+  // data:{
+  //  miVariableColor: '',
+  //       mess:""
+  // },
+  // miVariableColor="red",
 
   methods: {
     mostrarNotificacion () {
       this.$q.notify('Otra notificacion')
     },
     hacerAlgo () {
-      console.log('haciendo algo')
+      // console.log('haciendo algo')
+      console.log(this.mess)
     }
   },
 
