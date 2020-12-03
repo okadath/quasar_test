@@ -14,7 +14,7 @@
 import Vue from 'vue'
 import Buefy from 'buefy'
 // import 'buefy/dist/buefy.css'
-import "src/boot/asd.scss"
+import 'src/boot/asd.scss'
 import '@mdi/font/css/materialdesignicons.css'
 // import '@fortawesome/fontawesome-free/css/all.css'
 // import '@fortawesome/fontawesome-free/js/all.js'
@@ -23,5 +23,3 @@ import '@mdi/font/css/materialdesignicons.css'
 Vue.use(Buefy, {
   // defaultIconPack: 'fas',
 })
-
-

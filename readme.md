@@ -603,4 +603,15 @@ Vue.use(Buefy, {
 ```
 
 TODO:
-cambiar el hint y el cursor de android del form (o eliminarlo)
++ cambiar el hint y el cursor de android del form (o eliminarlo)
++ correr streams en video
++ los videos subidos deben tener cierto tamaño y el player debe acomodarlos al fondo
++ configurar nginx para statics y videos
+
+usaremos el qmediaplayer, de quasar, con la configuracion para mobil, aunque aun no se como reproducir con el streams mientras se descarga el video
+creo que eso depende de nginx
+https://stackoverflow.com/questions/22728016/nginx-is-not-accepting-range-of-bytes
+
+en mobil si tratamos de modificarlo se reinicia el video, hay que verificar eso
+
+si este no se corrije necesitamos hacer que los videos sean cortos

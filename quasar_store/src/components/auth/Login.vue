@@ -7,7 +7,7 @@
             <b-input required v-model="email" color="red" type="email" placeholder="Email"  ></b-input>
         </b-field>
            <b-field label="Password">
-            <b-input type="password" v-model="password" placeholder="Password" required  password-reveal>
+            <b-input hide-hint type="password" v-model="password" placeholder="Password" required  password-reveal>
             </b-input>
         </b-field>
     <hr/>
