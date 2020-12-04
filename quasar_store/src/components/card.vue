@@ -23,6 +23,8 @@
         mobile-mode
             hide-volume-slider
             dense
+            preload="metadata"
+            disabled-seek
     
   >
     <!-- <template v-slot:controls>

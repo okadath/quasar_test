@@ -615,3 +615,10 @@ https://stackoverflow.com/questions/22728016/nginx-is-not-accepting-range-of-byt
 en mobil si tratamos de modificarlo se reinicia el video, hay que verificar eso
 
 si este no se corrije necesitamos hacer que los videos sean cortos
+
+
+camara instalar
+
+@capacitor/core @ionic/pwa-elements
+
+https://quasar.dev/quasar-cli/developing-capacitor-apps/capacitor-api
