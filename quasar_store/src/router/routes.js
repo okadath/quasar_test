@@ -130,6 +130,11 @@ const routes = [
         path: '/about/',
         name: 'about',
         component: () => import('components/views/About.vue')
+      },
+      {
+        path: '/notification/',
+        name: 'notification',
+        component: () => import('components/views/Notification.vue')
       }
 
       // {

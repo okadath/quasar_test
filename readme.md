@@ -12,7 +12,7 @@ yarn quasar new [s|store] <nombre_modulo_de_store>
 ```
 
 diseñar layouts
-https://quasar.dev/layout-builder
+<https://quasar.dev/layout-builder>
 
 crear el proyecto con:
 
@@ -228,7 +228,7 @@ export default defineComponent({
 ```
 
 en una pagina podemos heredar muchos componentes al parecer y un layout usa una pagina, los layouts se
-pueden crear en esta pagina https://quasar.dev/layout-builder y se importan en un nuevo layout creado con
+pueden crear en esta pagina <https://quasar.dev/layout-builder> y se importan en un nuevo layout creado con
 
 ```sh
 yarn quasar new [l|layout] <nombre_layout>
@@ -379,7 +379,6 @@ const routes: RouteConfig[] = [
 export default routes
 ```
 
-
 ## run
 
 ejecutar
@@ -427,11 +426,11 @@ para desactivar eslint mientras trabajas buscar en el `quasar.conf.js` las sigui
 ```
 
 uuid in all systems?????
-https://www.stevenmoseley.com/blog/tech/uuid-primary-keys-django-rest-framework-2-steps
+<https://www.stevenmoseley.com/blog/tech/uuid-primary-keys-django-rest-framework-2-steps>
 
 flexbox
-https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/
-https://quasar.dev/layout/grid/flex-playground
+<https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/>
+<https://quasar.dev/layout/grid/flex-playground>
 
 quasar ya trae iconos ṕero al agregar buefy no los reconoce, hay que instalarlos
 
@@ -501,7 +500,7 @@ Vue.use(Buefy, {
 
 ### personalizar color buefy
 
-https://buefy.org/documentation/customization/
+<https://buefy.org/documentation/customization/>
 creamos un archivo .scss en el que se almacenaran las variables a personalizar
 
 ```scss
@@ -588,6 +587,7 @@ $link-focus-border: $primary;
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 ```
+
 y lo exportamos en el boot/buefy,js:
 
 ```js
@@ -603,6 +603,7 @@ Vue.use(Buefy, {
 ```
 
 TODO:
+
 + cambiar el hint y el cursor de android del form (o eliminarlo)
 + correr streams en video
 + los videos subidos deben tener cierto tamaño y el player debe acomodarlos al fondo
@@ -610,15 +611,14 @@ TODO:
 
 usaremos el qmediaplayer, de quasar, con la configuracion para mobil, aunque aun no se como reproducir con el streams mientras se descarga el video
 creo que eso depende de nginx
-https://stackoverflow.com/questions/22728016/nginx-is-not-accepting-range-of-bytes
+<https://stackoverflow.com/questions/22728016/nginx-is-not-accepting-range-of-bytes>
 
 en mobil si tratamos de modificarlo se reinicia el video, hay que verificar eso
 
 si este no se corrije necesitamos hacer que los videos sean cortos
 
-
 camara instalar
 
 @capacitor/core @ionic/pwa-elements
 
-https://quasar.dev/quasar-cli/developing-capacitor-apps/capacitor-api
+<https://quasar.dev/quasar-cli/developing-capacitor-apps/capacitor-api>

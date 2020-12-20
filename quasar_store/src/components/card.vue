@@ -10,13 +10,11 @@
       </q-card-section>
     </q-card> -->
 
-
-
       <q-card class="my-card">
-          <q-media-player 
+          <q-media-player
     :sources="sources"
     @playing="isPlaying = true"
-    @paused="isPlaying = false" 
+    @paused="isPlaying = false"
     content-style="height: 200px;"
     ref="qmp"
     type="video"
@@ -25,7 +23,7 @@
             dense
             preload="metadata"
             disabled-seek
-    
+
   >
     <!-- <template v-slot:controls>
       <div class="column text-white q-pa-md q-mt-xs">
@@ -66,8 +64,6 @@
       </q-card-section>
     </q-card>
 
-
-
      <!-- <q-card class="my-card"> -->
          <!-- <video
     id="my-video"
@@ -79,7 +75,7 @@
     poster="MY_VIDEO_POSTER.jpg"
     data-setup="{}"
   >
-    <source src="http://127.0.0.1:8000/static/chess.mp4" type="video/mp4" /> 
+    <source src="http://127.0.0.1:8000/static/chess.mp4" type="video/mp4" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
       web browser that
@@ -96,8 +92,6 @@
       </q-card-section>
     </q-card> -->
 
-
-
      <!-- <q-card class="my-card">
         <img src="http://10.0.0.7:8000/static/j.jpeg"> -->
        <!-- <img src="http://127.0.0.1:8000/static/chess.mp4"> -->
@@ -106,15 +100,13 @@
       </q-card-section>
     </q-card> -->
 
-
-
       </div>
   </q-page>
-      
+
 </template>
 
 <script>
-import myVideo from 'vue-video'
+// import myVideo from 'vue-video'
 
 // var player = videojs('#player-id');
 // // can also be `tap` or `touchend` or some other event instead of `click`
@@ -127,36 +119,32 @@ import myVideo from 'vue-video'
 // });
 
 export default {
-   name: 'Card',
-    data () {
-        return {
-          isPlaying: false,
-                lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d ',
+  name: 'Card',
+  data () {
+    return {
+      isPlaying: false,
+      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d ',
 
-            // video: {
-                sources: [{
-                    src: 'http://10.0.0.7:8000/v',
-                    type: 'video/mp4'
-                }],
-                options: {
-                    autoplay: true,
-                    volume: 0.6,
-                    poster: 'http://covteam.u.qiniudn.com/poster.png'
-                }
-            // }
-        }
-    },
-    components: {
-        myVideo
+      // video: {
+      sources: [{
+        src: 'http://10.0.0.7:8000/v',
+        type: 'video/mp4'
+      }],
+      options: {
+        autoplay: true,
+        volume: 0.6,
+        poster: 'http://covteam.u.qiniudn.com/poster.png'
+      }
+      // }
     }
+  },
+  components: {
+    // myVideo
+  }
 }
 
-
-
-
-
 // export default {
-  
+
 //   name: 'Card',
 //   data () {
 //     return {
@@ -180,17 +168,17 @@ export default {
 //         myVideo
 //     }
 
-      // video: {
-      //   label: 'Tears of Steel',
-      //   poster: 'media/TearsOfSteel/TearsOfSteel.jpeg',
-      //   sources: [
-      //     {
-      //       src: 'http://10.0.0.7:8000/static/chess.mp4',
-      //       // src: 'http://ftp.nluug.nl/pub/graphics/blender/demo/movies/ToS/tears_of_steel_720p.mov',
-      //       type: 'video/mp4'
-      //     }
-      //   ]
-      // }
+// video: {
+//   label: 'Tears of Steel',
+//   poster: 'media/TearsOfSteel/TearsOfSteel.jpeg',
+//   sources: [
+//     {
+//       src: 'http://10.0.0.7:8000/static/chess.mp4',
+//       // src: 'http://ftp.nluug.nl/pub/graphics/blender/demo/movies/ToS/tears_of_steel_720p.mov',
+//       type: 'video/mp4'
+//     }
+//   ]
+// }
 
 //     }
 //   }
@@ -202,5 +190,3 @@ export default {
   width: 100%
   max-width: 550px
 </style>
-
-

@@ -70,6 +70,11 @@
             test_card
           </q-item-section>
         </q-item>
+        <q-item :to="{ name: 'notification' }" clickable v-ripple>
+          <q-item-section>
+            notification
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
