@@ -622,3 +622,6 @@ camara instalar
 @capacitor/core @ionic/pwa-elements
 
 <https://quasar.dev/quasar-cli/developing-capacitor-apps/capacitor-api>
+
+al parecer para chats o para push notifications se necesita el escalado horizontal de los servers de sockets ya que estos nativamente escalan verticalmente(una pc mas grande maneja mas sockets)
+<https://medium.com/swlh/building-a-browser-push-notification-service-the-challenges-with-the-websocket-server-8cf9b1827e24>
